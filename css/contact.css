@@ -1,0 +1,390 @@
+p {
+  margin: 0; 
+}
+ul { 
+  padding: 0; 
+}
+li { 
+  list-style: none; 
+}
+a { 
+  text-decoration: none; 
+}
+h1 {
+  font-size: 30px;
+  line-height: 1.5;
+  text-shadow: 1px 1px 5px rgba(167, 221, 255, 0.5);
+  margin: 0 0 10px 0;
+  text-align: center;
+  color: #909090;
+}
+h2 { 
+  color: #909090;
+  font-weight: 300; 
+  font-size: 18px;
+  text-align: center;
+}
+* { 
+  font-family:"宋体", "Times New Roman", Times, serif;
+}/*要改字体*/
+body { 
+  background-color: #eee; 
+}
+.main-container { 
+  max-width: 1200px;
+  margin: 0 auto; 
+  background: white;
+  box-shadow: 0 0 10px rgba(107, 110, 112, 0.4); 
+}
+/*导航部分*/
+#logo a { 
+  color: #909090; 
+  margin-left: 35px;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.main-nav { 
+  border-bottom: #DDDDDD 1px solid; 
+}
+
+.main-nav li {
+  margin-right: 2px;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 1px 1px 5px rgba(80, 80, 80, 0.4);
+}
+
+.main-nav li a { 
+  display: block; 
+  padding: 12px 30px; 
+  color: #909090;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.main-nav li.active { 
+  background-color: #A7DDFF; 
+  padding: 12px 30px;
+  font-weight: bold;
+  color: #909090;
+}
+
+.main-nav li a:hover { 
+  background-color: #A7DDFF;
+}
+
+ul.nav {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;/*伸缩容器  css3里的伸缩布局*/
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;/*弹性盒子元素将向行中间位置对齐*/
+}
+ul.nav li { 
+  cursor: pointer;
+   display: inline-block; 
+}
+/*主体部分*/
+.content-container {
+  box-sizing: border-box;
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px 25px;
+}
+/*视频部分*/
+.mainvideo{
+  margin-left: 50px;
+  box-sizing: border-box;
+  max-width: 1170px;
+  width: 600px;
+  height: 400px;
+  margin-top:50px;
+  border:0px solid #909090;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(80, 80, 80, 0.5),-2px -2px 5px rgba(80, 80, 80, 0.5);
+}
+/*初始化样式*/
+.videoContainer{
+	top: 50px;
+	left: 60px;
+	width: 480px;
+	height: 300px;
+	position: relative;
+	overflow: hidden;
+	background: #000;
+	color: #ccc;
+	border:2px solid #909090;
+	box-shadow: 0px 0px 25px rgba(80, 80, 80, 0.5);
+}
+/*头部样式*/
+.caption{
+	display: none;
+	position: absolute;
+	width: 480px;
+	padding: 10px;
+	color: #ccc;
+	font-size: 20px;
+	font-weight: bold;
+	box-sizing: border-box;
+	-ms-box-sizing；border-box;
+	-webkit-box-sizing；border-box;
+	-moz-box-sizing；border-box;
+	background: #1F1F1F;
+	background: -moz-linear-gradient(top,#242424 50%,#1F1F1F 50%,#171717 100%);
+	background: -webkit-linear-gradient(top,#242424 50%,#1F1F1F 50%,#171717 100%);
+	background: -o-linear-gradient(top,#242424 50%,#1F1F1F 50%,#171717 100%);
+}
+/*底部样式*/
+.control{
+	background: #333;
+	color: #ccc;
+	position: absolute;
+	width: 480px;
+	z-index: 5;
+	display: none;
+}
+.topControl{
+	height: 11px;
+	border-bottom: 1px solid #404040;
+	padding: 1px 5px;
+	background: #1F1F1F;
+	background: -moz-linear-gradient(top,#242424 50%,#1F1F1F 50%,#171717 100%);
+	background: -webkit-linear-gradient(top,#242424 50%,#1F1F1F 50%,#171717 100%);
+	background: -o-linear-gradient(top,#242424 50%,#1F1F1F 50%,#171717 100%);
+}
+.btmControl{
+	clear: both;
+	background: #1F1F1F;
+	background: -moz-linear-gradient(top,#242424 50%,#1F1F1F 50%,#171717 100%);
+	background: -webkit-linear-gradient(top,#242424 50%,#1F1F1F 50%,#171717 100%);
+	background: -o-linear-gradient(top,#242424 50%,#1F1F1F 50%,#171717 100%);
+}
+.control div.btn{
+	float: left;
+	width: 34px;
+	height: 30px;
+	padding: 0 5px;
+	border-right: 1px solid #404040;
+	cursor: pointer;
+}
+.control div.text{
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 30px;
+	text-align: center;
+	font-family: verdana;
+	width: 20px;
+	border:none;
+	color: #777;
+}
+.loading,#init{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../images/loading0.gif) no-repeat 50% 50%;
+	z-index: 2;
+	display: none;
+}
+#init{
+	background: url(../images/play-round.png) no-repeat 50% 50% !important;
+	cursor: pointer;
+}
+.control div.btnPlay{
+	background: url(../images/play-round.png) no-repeat;
+	border-left: 1px solid #404040;
+}
+.control div.paused{
+	background: url(../images/pause-round.png) no-repeat;
+}
+
+.progress{
+	width: 85%;
+	height: 10px;
+	position:relative;
+	float: left;
+	cursor: pointer;
+	background: #444;
+	background: -moz-linear-gradient(top,#666,#333);
+	background: -webkit-linear-gradient(top,#666,#333);
+	background: -o-linear-gradient(top,#666,#333);
+	box-shadow: 0 2px 3px #333 inset;
+	-moz-box-shadow: 0 2px 3px #333 inset;
+	-webkit-box-shadow: 0 2px 3px #333 inset;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+.progress span{
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+.timeBar{
+	z-index: 10;
+	width: 0;
+	background: #3FB7FC;
+	background: -moz-linear-gradient(top,#A0DCFF 50%,#3FB7FC 50%,#16A9FF 100%);
+	background: -webkit-linear-gradient(top,#A0DCFF 50%,#3FB7FC 50%,#16A9FF 100%)
+	background: -o-linear-gradient(top,#A0DCFF 50%,#3FB7FC 50%,#16A9FF 100%);
+	box-shadow: 0 0 1px #fff;
+	-moz-box-shadow: 0 0 1px #fff;
+	-webkit-box-shadow: 0 0 1px #fff;
+}
+.bufferBar{
+	z-index: 5;
+	width: 0;
+	background: #777;
+	background: -moz-linear-gradient(top,#999,#666);
+	background: -webkit-linear-gradient(top,#999,#666);
+	background: -o-linear-gradient(top,#999,#666);
+	box-shadow: 2px 0 5px #333;
+	-moz-box-shadow: 2px 0 5px #333;
+	-webkit-box-shadow: 2px 0 5px #333;
+}
+.time{
+	width: 15%;
+	float: right;
+	text-align: center;
+	font-size: 11px;
+	line-height: 12px;
+}
+
+.control div.sound{
+	background: url(../images/music-round.png) no-repeat ;
+	border:none;
+	float: right;
+}
+.control div.sound2{
+	background: url(../images/music-round.png) no-repeat;
+}
+.control div.muted{
+	background: url(../images/deny-round.png) no-repeat;
+}
+.volume{
+	position: relative;
+	cursor: pointer;
+	width: 70px;
+	height: 10px;
+	float: right;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+.volumeBar{
+	display: block;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #eee;
+	z-index: 10; 
+}
+
+.control div.btnStop{
+	background: url(../images/stop-round.png) no-repeat;
+}
+.control div.spdText{
+	border:none;
+	font-size:14px;
+	line-height: 30px;
+	font-style: italic;
+}
+.control div.selected{
+	font-size: 15px;
+	color: #ccc;
+}
+
+
+.control div.btnFS{
+	background: url(../images/fullscreen.png) no-repeat;
+	float: right;
+}
+.control div.btnLight{
+	background: url(../images/sun.png) no-repeat;
+	border-left: 1px solid #404040;
+	float: right;
+}
+.control div.lighton{
+	background: url(../images/an.png) no-repeat;
+}
+
+
+/*字幕滚动*/
+.maintext{
+	box-sizing: border-box;
+    max-width: 1170px;
+    width: 250px;
+    height: 400px;
+    float: right;
+    margin-right: 50px;
+    margin-top: -400px;
+    border:1px solid #909090;
+    background:linear-gradient(to top,black,#fff);
+    border-radius: 10px;
+    box-shadow: 5px 5px 4px rgba(80, 80, 80, 0.5),-2px -2px 5px rgba(80, 80, 80, 0.5),
+    inset 2px 2px 15px rgba(80, 80, 80, 0.5),inset -2px -2px 15px rgba(80, 80, 80, 0.5);
+}
+.myul{
+	width: 200px;
+    height: 300px;
+    margin:15px auto;	
+    border-radius: 5px;
+	background:linear-gradient(to top,#999,black);
+    box-shadow: 2px 2px 5px rgba(80, 80, 80, 0.5),-2px -2px 5px rgba(80, 80, 80, 0.5),
+    inset 2px 2px 15px rgba(80, 80, 80, 0.5),inset -2px -2px 15px rgba(80, 80, 80, 0.5);
+}
+.myul li{
+	text-align: center;
+	border: 0px solid #909090;
+	font-size: 16px;
+
+	color: white;
+	/*文字颜色渐变
+	background:-webkit-linear-gradient(left,#f00,#ff0 25%,#0f0 40%,#0ff 55%,#00f 70%,#f00);
+	  -webkit-background-clip:text; 
+    color:transparent;*/
+}
+
+.ul1{
+	font-size: 20px;
+}
+.hua{
+	width: 50px;
+	height: 50px;
+	border-radius: 100px;
+	margin:0 auto;
+	border: 3px solid #909090;
+    box-shadow: 2px 2px 5px rgba(80, 80, 80, 0.5),-2px -2px 5px rgba(80, 80, 80, 0.5),
+    inset 2px 2px 5px rgba(80, 80, 80, 0.5),inset -2px -2px 5px rgba(80, 80, 80, 0.5);
+}
+.ha{
+	width: 30px;
+	height: 30px;
+	border-radius: 100px;
+	border: 4px solid #909090;
+	margin:6px auto;
+    box-shadow: 2px 2px 5px rgba(80, 80, 80, 0.5),-2px -2px 5px rgba(80, 80, 80, 0.5),
+    inset 2px 2px 15px rgba(80, 80, 80, 0.5),inset -2px -2px 15px rgba(80, 80, 80, 0.5);
+}
+
+/*footer部分*/
+footer {
+	padding: 25px 40px 35px 40px;
+	background-color: rgba(237, 237, 237, 0.4);
+	clear: both;
+}
+footer p {	
+	float: left;
+	font-weight: bold;
+	font-size: 16px;
+	color: #909090;
+}

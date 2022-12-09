@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Zhao Wan Tin</title>
+	<link rel="stylesheet" type="text/css" href="css/about.css">
+</head>
+<body>
+	<div class="main-container">
+	<!--导航部分-->
+			<div id="logo">
+				<a href="#"> Wan Tin Album</a>
+			</div>
+	
+		<!--主体部分-->
+		<div class="content-container">
+			<header>
+				<h1 class="center-text">躲在某一时间，想念一段时间的掌纹；躲在某一地点，想念一个站在来路也站在去路的，让我牵挂的人。</h1>
+			</header>
+
+			<!--图片轮播部分-->
+			<div class="two">
+         		<MARQUEE  onmouseover=stop()  onmouseout=start()  scrollAmount=5  loop=infinite behavior=alternate deplay="0">
+		 			<a href="http://baidu.com"><img src="images/wantin1.jpg"></a>
+		 			<a href="http://baidu.com"><img src="images/wantin2.jpg"></a>
+		 			<a href="http://baidu.com"><img src="images/wantin3.jpg"></a>
+		 			<a href="http://baidu.com"><img src="images/wantin4.jpg"></a>
+		 			<a href="http://baidu.com"><img src="images/wantin5.jpg"></a>
+		 			<a href="http://baidu.com"><img src="images/wantin6.jpg"></a>
+		 			<a href="http://baidu.com"><img src="images/wantin7.jpg"></a>
+		 			<a href="http://baidu.com"><img src="images/wantin8.jpg"></a>
+				</MARQUEE>
+      		</div>
+		</div>
+		<!--footer部分-->
+		<footer>
+			<p>Copyright &copy; Made By: Modesty谦虚 For 赵婉婷.</p>
+		</footer>	
+	</div>	
+	
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script>
+window.onload = function () {
+	var Tab = document.getElementsByClassName('Tab')[0];
+	var nav= document.getElementsByTagName('ul')[1];
+	var navLi = nav.getElementsByTagName('li');
+
+	var con = document.getElementsByClassName("content");
+	var cur_index = 0;
+
+	
+	Tab.onmouseover = function(){
+		tab();
+	}
+	function tab(){
+		if (navLi.length != con.length) {
+			return;
+		}else{
+				for(var i = 0;i < navLi.length;i++){
+					navLi[i].index = i;
+					navLi[i].onmouseover = function(){
+						cur_index = this.index;
+						showCon();
+					}
+				}
+			}
+	}
+
+	function showCon(){
+		if (navLi.length != con.length) {
+			return;
+		}else{
+				if(cur_index  > navLi.length-1){
+					cur_index = 0;
+				}
+
+				console.log(cur_index);
+				for(var j = 0;j< navLi.length;j++){
+					navLi[j].className = '';
+					con[j].className = 'content';
+				}
+				navLi[cur_index].className = 'tab1';
+				con[cur_index].className = 'content activeCon';
+				cur_index++;
+			}
+	}	
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+/* Header */
+.large-header {
+	position: relative;
+	width: 100%;
+	background: #333;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+	z-index: 1;
+}
+.container  .large-header {
+	background-image: url('../images/demo-2-bg.jpg');
+	background-position: center bottom;
+}
+.main-title {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	color: #f9f1e9;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate3d(-50%,-50%,0);
+	transform: translate3d(-50%,-50%,0);
+}
+
+.container  .main-title {
+	font-family: 'Clicker Script', cursive;
+	font-weight: normal;
+	font-size: 8em;
+	padding-left: 10px;
+	text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+@media only screen and (max-width : 768px) {
+	.container  .main-title {
+		font-size: 4em;
+	}
+}
+
+#lg{
+	opacity: 0.8;
+	width:468px;
+	height:468px;
+    margin:0 auto; 
+    background:url(../images/login_bg.png) no-repeat;
+}
+
+#lg_main{
+	position: relative;
+	width:400px; 
+	height:381px; 	
+}
+#ur{
+	position: absolute;
+	outline:none;
+	height:37px;
+	border:0;
+	color:#666;
+	width:236px;
+	margin-left: -90px;
+	margin-top:260px;
+	background:url(../images/user.png) no-repeat;
+	padding-left:10px;
+	font-size:16px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+#pw{
+	outline:none;
+	height:37px;
+	border:0;
+	color:#666;
+	width:236px;
+	margin-top:310px;
+	margin-left: 65px;
+	background:url(../images/password.png) no-repeat;
+	padding-left:10px;
+	font-size:16px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+#lg_m_3{
+	position: relative;
+	border: 0px solid red;
+	width: 236px;
+	height: 37px;
+	margin-left: 110px;
+	margin-top:-28px;
+}
+#lg_m_3 p{
+	color:gray; 
+	font-size: 12px;
+	float: left;
+	font-weight:bolder;
+}
+#yz{	
+	position: absolute;
+	outline:none;
+	margin-left: -80px;
+	margin-top: 6px;
+	height:25px;
+	border:1;
+	color:#666;
+	width:80px;
+	background:url(../images/passwrd.png) no-repeat;
+	padding-left:10px;
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+#yzm{
+	margin-top:10px;
+    float: right;
+	width:50px;
+    height:20px;
+    font-size: 12px;
+    background-color:gray;
+    text-align:center;
+}
+
+#bn{
+	outline:none;
+	width:330px; 
+	height:72px; 
+	background:url(../images/enter.png) no-repeat;
+	border:0; 
+	display:block; 
+	font-size:18px; 
+	color:#FFF; 
+	font-family:Arial, Helvetica, sans-serif; 
+	font-weight:bolder;
+}
+
+#lg_foot{
+	height:80px;
+	width:330px;
+	padding: 6px 68px 0 68px;
+}
